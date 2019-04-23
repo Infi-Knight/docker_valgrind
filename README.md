@@ -10,4 +10,4 @@
   - `docker run -ti`: interactively run docker image
   - `-v $PWD:/test`  is the option for mounting current working directory (where we have the code and Dockerfile) under /test/ directory within the executed container. In this way, you can keep modifying code outside the container and still test the its most up-to-date version.
   - `memory-test:0.1`: name of the docker image
-  - `bash -c "cd /test/; g++ -o main main.cpp && valgrind --leak-check=full ./main" `:  to change directory, build the C++ code and finally do memory leak check with Valgrind on the executable
+  - `bash -c "cd /test/; g++ -o main.out main.cpp && valgrind --leak-check=full ./main.out" `:  to change directory, build the C++ code and finally do memory leak check with Valgrind on the executable
